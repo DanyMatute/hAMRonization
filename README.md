@@ -1,5 +1,4 @@
 ![Python package](https://github.com/pha4ge/hAMRonization/workflows/test_package/badge.svg)
-[![Preprint](https://img.shields.io/badge/Preprint-10.1101/2024.03.07.583950-blue)](https://doi.org/10.1101/2024.03.07.583950)
 [![DOI](https://zenodo.org/badge/248040662.svg)](https://zenodo.org/badge/latestdoi/248040662)
 [![Docs English](https://img.shields.io/badge/Documentation-English-blue)](https://github.com/pha4ge/hAMRonization/blob/master/docs/subgrant/PHA4GE_AMR_SubGrant_Documentation.pdf)
 [![Docs English](https://img.shields.io/badge/Documentation-Español-blue)](https://github.com/pha4ge/hAMRonization/blob/master/docs/subgrant/PHA4GE_hAMRonization_espan%CC%83ol.pdf)
@@ -66,7 +65,7 @@ options:
   -v, --version         show program's version number and exit
 
 Tools with hAMRonizable reports:
-  {abricate,amrfinderplus,amrplusplus,ariba,csstar,deeparg,fargene,groot,kmerresistance,resfams,resfinder,mykrobe,pointfinder,rgi,srax,srst2,staramr,tbprofiler,summarize}
+  {abricate,amrfinderplus,amrplusplus,ariba,csstar,deeparg,fargene,groot,kmerresistance,resfams,resfinder,mykrobe,pointfinder,rgi,srax,srst2,staramr,tbprofiler,summarize,bvbrc}
     abricate            hAMRonize abricate's output report i.e., OUTPUT.tsv
     amrfinderplus       hAMRonize amrfinderplus's output report i.e., OUTPUT.tsv
     amrplusplus         hAMRonize amrplusplus's output report i.e., gene.tsv
@@ -91,6 +90,7 @@ Tools with hAMRonizable reports:
     srst2               hAMRonize srst2's output report i.e., OUTPUT_srst2_report.tsv
     staramr             hAMRonize staramr's output report i.e., resfinder.tsv
     tbprofiler          hAMRonize tbprofiler's output report i.e., OUTPUT.results.json
+    bvbrc               hAMRonize bvbrc's output report i.e., bvbrc_amr_annotation.tsv
     summarize           Provide a list of paths to the reports you wish to summarize
 ```
 
@@ -210,6 +210,7 @@ Currently implemented parsers and the last tool version for which they have been
 16. [srst2](hAMRonization/Srst2IO.py): last updated for v0.2.0
 17. [staramr](hAMRonization/StarAmrIO.py): last updated for v0.8.0
 18. [tbprofilder](test/data/raw_outputs/tbprofiler/tbprofiler.json): last updated for v3.0.8
+19. [bvbrc](hAMRonization/BvbrcIO.py): updates Nov 14 2024
 
 ## Implementation Details
 
@@ -347,6 +348,3 @@ Here are some known issues that we would welcome input on trying to solve!
 
 - `contig_id` isn't general enough when some tools this ID naturally corresponds to a `read_name` (deepARG), individual ORF (resfams), or protein sequence (AFP with protein input): *change to `query_id_name` or similar?*
 
-## Citation
-If you use hAMRonization please cite the following publication:
-> I Mendes et al. 2024. "hAMRonization: Enhancing antimicrobial resistance prediction using the PHA4GE AMR detection specification and tooling". bioRxiv. https://doi.org/10.1101/2024.03.07.583950

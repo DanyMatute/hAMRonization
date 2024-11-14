@@ -20,6 +20,7 @@ from hAMRonization import TBProfilerIO
 from hAMRonization import MykrobeIO
 from hAMRonization import PointFinderIO
 from hAMRonization import FARGeneIO
+from hAMRonization import BvBrcIO
 
 _FormatToIterator = {
     "abricate": AbricateIO.AbricateIterator,
@@ -40,6 +41,7 @@ _FormatToIterator = {
     "mykrobe": MykrobeIO.MykrobeIterator,
     "pointfinder": PointFinderIO.PointFinderIterator,
     "fargene": FARGeneIO.FARGeneIOIterator,
+    "bvbrc": BvBrcIO.BvBrcIOIterator,
 }
 
 _ReportFileToUse = {
@@ -60,7 +62,8 @@ _ReportFileToUse = {
     "tbprofiler": "OUTPUT.results.json",
     "mykrobe": "OUTPUT.json",
     "pointfinder": "PointFinder_results.txt",
-    "fargene": "retrieved-genes-*-hmmsearched.out"
+    "fargene": "retrieved-genes-*-hmmsearched.out",
+    "bvbrc": "bvbrc_amr_annotation.tsv"
 }
 
 
@@ -83,6 +86,7 @@ _RequiredToolMetadata = {
     "srst2": Srst2IO.required_metadata,
     "staramr": StarAmrIO.required_metadata,
     "tbprofiler": TBProfilerIO.required_metadata,
+    "bvbrc": BvBrcIO.required_metadata,
 }
 
 
